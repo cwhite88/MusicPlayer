@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:theme="@style/Theme.AppCompat"
+    tools:context=".MainActivity">
+
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="250dp"
+        android:layout_marginLeft="55dp"
+        android:layout_height="250dp"
+        android:background="@drawable/ic_music" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_margin="20dp"
+
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/pause"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="22dp"
+
+            android:background="@drawable/ic_pause"
+            android:onClick="musicstop" />
+
+        <Button
+            android:id="@+id/start"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+
+            android:layout_marginRight="22dp"
+
+
+            android:background="@drawable/ic_play"
+            android:onClick="musicplay" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RadioGroup
+                android:id="@+id/Song_Selection"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:checkedButton="@+id/song1">
+
+                <RadioButton
+                    android:id="@+id/song1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tame Impala - Elephant" />
+
+                <RadioButton
+                    android:id="@+id/song2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tame Impala - Let it Happen" />
+
+                <RadioButton
+                    android:id="@+id/song3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tame Impala - Why don't they talk to me" />
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
